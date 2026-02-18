@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(backgroung.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vm);
+    height: 90vh;
+    position: relative;
+}
+
+.main.box {
+    height: 70vh;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    max-width: 70vh;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 72px;
+}
+
+nav img {
+    color: red;
+    width: 84px;
+    position: relative;
+    z-index: 10;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+
+    height: calc(100% - 62px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+    text-align: center;
+
+}
+
+.hero> :first-child {
+    font-family: "poppins", sans-serif;
+    font-weight: bolder;
+    font-size: 60px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(67, 62, 62);
+}
+
+.btn {
+    font-family: "poppins", sans-serif;
+    padding: 3px 8px;
+    font-weight: 400;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(248, 243, 243, 0.342);
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.main input {
+    padding: 7px 101px 8px 14px;
+    color: white;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgb(23, 23, 23, 0.9);
+    border: 1px solid rgb(23, 23, 23, 0.5);
+}
+.first{
+    gap: 16px;
+}
+
+
+body {
+    margin: 0;
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.trending {
+    padding: 40px;
+}
+
+.trending h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card:hover {
+    width: 400px;
+}
+
+.rank {
+    position: absolute;
+    bottom: -20px;
+    left: -10px;
+    font-size: 120px;
+    font-weight: bold;
+    color: black;
+    -webkit-text-stroke: 1px white;
+    z-index: 2;
+   
+}
+.faq h2{
+    font-size: 48;
+    text-align: center;
+}
+.faq{
+    background-color: black;
+    color: white;
+    padding: 34px;
+    max-width: 40vm;
+    margin: auto;
+    font-size: 24px;
+
+}
+.faqbox:hover{
+    background-color: grey;
+}
+
+
+.faqbox{
+display: flex;
+justify-content: space-between;
+background-color: rgb(57, 55, 55);
+padding: 24px;
+width: 1000px;
+height: 44px;
+margin: 34px auto;
+cursor: pointer;
+}
+
+.box-cont{
+    display: flex;
+    gap:25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2{
+     background: linear-gradient(145deg, #1c1c3c, #2a0f2e);
+    border-radius: 20px;
+    padding: 30px;
+    width: 250px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s ease;
+    position: relative;
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.box2::after, .box2::before{
+
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent 70%, red,blue);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+.box2::before{
+    filter: blur(1.5rem)
+    opacity(0.5)
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+.box2:hover{
+    transform: translateY(-8px);
+}
+
+.head{
+     padding-bottom: 10px;
+     text-align: center;
+
+}
+.icon{
+    font-size: 40px;
+    text-align: right;
+    padding-top: 150px
+}
+
